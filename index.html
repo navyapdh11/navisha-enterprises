@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en" data-navisha-system="active">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="description" content="Navisha AI Super Agent – Cultural Commerce Intelligence for Nepalese Traditional Clothing">
+    <meta name="theme-color" content="#8B4513">
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Navisha AI • Cultural Commerce</title>
+</head>
+<body>
+    <div class="overlay" id="overlay"></div>
+    <div class="admin-panel" id="adminPanel">
+        <div class="admin-header">
+            <h3><i class="fas fa-brain"></i> Navisha Admin • Intelligence Core</h3>
+            <button class="control-btn" id="closeAdminBtn"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="admin-tabs" id="adminTabs">
+            <button class="admin-tab active" data-tab="analytics">Analytics</button>
+            <button class="admin-tab" data-tab="conversations">Conversations</button>
+            <button class="admin-tab" data-tab="products">Products</button>
+            <button class="admin-tab" data-tab="search">Agentic Search</button>
+            <button class="admin-tab" data-tab="settings">Settings</button>
+        </div>
+        <div class="admin-content">
+            <div class="tab-content active" id="analyticsTab"></div>
+            <div class="tab-content" id="conversationsTab"></div>
+            <div class="tab-content" id="productsTab"></div>
+            <div class="tab-content" id="searchTab"></div>
+            <div class="tab-content" id="settingsTab"></div>
+        </div>
+    </div>
+
+    <div class="container">
+        <header class="main-header">
+            <h1><i class="fas fa-hands-helping"></i> Navisha Entrepreneurs</h1>
+            <p class="tagline">Preserving Nepalese Heritage • AI‑Powered Cultural Intelligence</p>
+            <div class="cultural-badge"><i class="fas fa-leaf"></i> RWA Verified • Geo‑Adaptive • Bio‑Intelligent</div>
+        </header>
+
+        <section class="intro-section text-center mb-30">
+            <h2><i class="fas fa-gem"></i> Discover Authentic Nepalese Culture</h2>
+            <p>Experience the rich tapestry of Nepalese heritage through handcrafted traditional clothing. Each piece told a centuries‑old story.</p>
+            <button class="btn" id="openAgentBtn"><i class="fas fa-robot"></i> Chat with Cultural AI Assistant</button>
+        </section>
+
+        <div class="products-grid" id="productsGrid"></div>
+
+        <section class="cultural-story mt-30">
+            <h2><i class="fas fa-book-open"></i> Cultural Story: The Art of Dhaka Weaving</h2>
+            <p>Dhaka fabric weaving is a centuries‑old tradition passed down through generations of Nepalese artisans. Originating from the Terai region, this intricate craft involves hand‑weaving colorful geometric patterns that encode family lineages and spiritual beliefs.</p>
+            <button class="btn" id="culturalStoryBtn"><i class="fas fa-comments"></i> Ask for More Cultural Stories</button>
+        </section>
+
+        <div class="text-center mt-30">
+            <button class="btn btn-secondary" id="adminBtn"><i class="fas fa-chart-line"></i> Open Admin Dashboard</button>
+            <button class="btn" id="resetSystemBtn" style="margin-left:15px;"><i class="fas fa-sync-alt"></i> Reset System Data</button>
+        </div>
+
+        <div class="system-status mt-30" id="systemStatus"></div>
+    </div>
+
+    <div id="navisha-ai-agent">
+        <button class="ai-agent-button" id="agentToggle">
+            <svg class="agent-icon" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+            <span class="notification-badge" id="notificationBadge" style="display:none;">0</span>
+        </button>
+        <div class="ai-agent-window" id="agentWindow">
+            <div class="agent-header">
+                <div class="agent-info"><div class="agent-avatar">नै</div><div class="agent-title"><h3>Navisha Cultural AI</h3><p>Bio‑Intelligent • MCTS • OASIS</p></div></div>
+                <div class="agent-controls"><button class="control-btn" id="minimizeBtn"><i class="fas fa-minus"></i></button><button class="control-btn" id="closeBtn"><i class="fas fa-times"></i></button></div>
+            </div>
+            <div class="messages-container" id="messagesContainer"></div>
+            <div class="quick-actions" id="quickActions">
+                <button class="quick-action" data-action="products">Products</button>
+                <button class="quick-action" data-action="stories">Stories</button>
+                <button class="quick-action" data-action="sizing">Sizing</button>
+                <button class="quick-action" data-action="authenticity">Authenticity</button>
+                <button class="quick-action" data-action="shipping">Shipping</button>
+            </div>
+            <div class="input-area">
+                <input type="text" class="message-input" id="messageInput" placeholder="Ask about Nepalese culture, clothing, or heritage..." autocomplete="off">
+                <button class="send-btn" id="sendBtn"><i class="fas fa-paper-plane"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/utils.js"></script>
+    <script src="js/agent.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
